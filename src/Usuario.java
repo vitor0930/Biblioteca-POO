@@ -1,12 +1,20 @@
 public class Usuario {
-    public String nome;
-    public String email;
-    public int idade;
-
-    public Usuario(String nome, String email, int idade) {
+    private String nome;
+    private String cpf;
+    
+    public Usuario(String nome, String cpf){
         this.nome = nome;
-        this.email = email;
-        this.idade = idade;
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public String getCpf() {
+        return cpf;
+    }
+    public boolean verificaDocumento(String cpf){
+        return cpf.length() == 11? true : false;
     }
 
 }

@@ -16,6 +16,7 @@ public class App {
         while(running){
             System.out.println("======================");
             System.out.println("=        MENU        =");
+            System.out.println("=      0. Sair       =");
             System.out.println("=  1. Listar acervo  =");
             System.out.println("= 2. Listar usuários =");
             System.out.println("=3. Cadastrar usuario=");

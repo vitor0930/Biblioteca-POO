@@ -10,7 +10,7 @@ public class BibliotecaService {
     public LIvroRepository lIvroRepository = new LIvroRepository();
 
     public void cadastrarUsuario(String nome, String cpf, String telefone) {
-        if (userRepository.users.stream().anyMatch(u -> u.getCpf() == cpf) || cpf.length() != 11 ) {
+        if (userRepository.users.stream().anyMatch(u -> u.getCpf().equals(cpf)) || cpf.length() != 11 ) {
             System.out.println("Cpf invalido/já utilizado");
         } else {
             userRepository.users.add(new Usuario(nome, cpf, telefone));
@@ -30,11 +30,11 @@ public class BibliotecaService {
     }
 
     public Usuario buscarPorCpf(String cpf) {
-        return userRepository.users.stream().filter(usuario -> usuario.getCpf() == cpf).findFirst().orElse(null);
+        return userRepository.users.stream().filter(usuario -> usuario.getCpf().equals(cpf)).findFirst().orElse(null);
     }
 
     public Livro buscarPorTituloEAutor(String titulo, String autor) {
-        return lIvroRepository.livros.stream().filter(x -> x.getTitulo() == titulo && x.getAutor() == autor).findFirst().orElse(null);
+        return lIvroRepository.livros.stream().filter(x -> x.getTitulo().equals(titulo) && x.getAutor().equals(autor)).findFirst().orElse(null);
     }
 
     public void emprestarLivro(Usuario usuario, Livro livro) {

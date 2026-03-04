@@ -1,11 +1,11 @@
 package Repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import Entity.Livro;
 
 public class LIvroRepository {
-    public List<Livro> livros = new ArrayList<>();
+    public Set<Livro> livros = new HashSet<>();
 
 }

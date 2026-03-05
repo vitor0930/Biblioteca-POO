@@ -25,7 +25,7 @@ public class App {
             System.out.println("=  6. Devolver livro =");
             System.out.println("======================");
 
-            System.out.println("Escolha uma opção");
+            System.out.println("Escolha uma opção: ");
             String opcao = sc.nextLine().trim();
 
             switch (opcao){

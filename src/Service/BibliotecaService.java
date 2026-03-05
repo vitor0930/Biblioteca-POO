@@ -14,11 +14,13 @@ public class BibliotecaService {
             System.out.println("Cpf invalido/já utilizado");
         } else {
             userRepository.users.add(new Usuario(nome, cpf, telefone));
+            System.out.println("Usuário cadastrado");
         }
     }
 
     public void cadastrarLIvro(String titulo, String autor) {
         lIvroRepository.livros.add(new Livro(titulo, autor));
+        System.out.println("Livro cadastrado");
     }
 
     public void listarUsuarios() {
@@ -45,6 +47,7 @@ public class BibliotecaService {
         } else {
             usuario.livrosUsados.add(livro);
             livro.setEmprestado(true);
+            System.out.println("Livro emprestado com sucesso");
         }
     }
 
@@ -56,6 +59,7 @@ public class BibliotecaService {
         } else {
             usuario.livrosUsados.remove(livro);
             livro.setEmprestado(false);
+            System.out.println("Livro devolvido com sucesso");
         }
     }
 

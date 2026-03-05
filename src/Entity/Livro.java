@@ -3,11 +3,12 @@ package Entity;
 public class Livro {
     private String titulo;
     private String autor;
-    private boolean emprestado = false;
+    private boolean emprestado;
 
     public Livro(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
+        this.emprestado = false;
     }
 
     public String getTitulo() {

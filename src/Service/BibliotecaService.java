@@ -32,11 +32,17 @@ public class BibliotecaService {
     }
 
     public Usuario buscarPorCpf(String cpf) {
-        return userRepository.users.stream().filter(usuario -> usuario.getCpf().equals(cpf)).findFirst().orElse(null);
+        return userRepository.users.stream()
+        .filter(usuario -> usuario.getCpf().equals(cpf))
+        .findFirst()
+        .orElse(null);
     }
 
     public Livro buscarPorTituloEAutor(String titulo, String autor) {
-        return lIvroRepository.livros.stream().filter(x -> x.getTitulo().equals(titulo) && x.getAutor().equals(autor)).findFirst().orElse(null);
+        return lIvroRepository.livros.stream()
+        .filter(x -> x.getTitulo().equals(titulo) && x.getAutor().equals(autor))
+        .findFirst()
+        .orElse(null);
     }
 
     public void emprestarLivro(Usuario usuario, Livro livro) {

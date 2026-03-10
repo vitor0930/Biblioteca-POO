@@ -2,6 +2,7 @@ package Entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Usuario {
     private String nome;
@@ -26,5 +27,17 @@ public class Usuario {
 
     public String getTelefone() {
         return telefone;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Usuario usuario = (Usuario) o;
+        return Objects.equals(cpf, usuario.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(cpf);
     }
 }

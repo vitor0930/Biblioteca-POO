@@ -61,7 +61,8 @@ public class App {
                     titleToSearch = sc.nextLine();
                     System.out.println("Digite o nome do autor do livro");
                     authorToSearch = sc.nextLine();
-                    bibliotecaService.emprestarLivro(bibliotecaService.buscarPorCpf(cpfToSearch),bibliotecaService.buscarPorTituloEAutor(titleToSearch,authorToSearch));
+                    bibliotecaService.emprestarLivro(bibliotecaService.buscarPorCpf(cpfToSearch),
+                    bibliotecaService.buscarPorTituloEAutor(titleToSearch,authorToSearch));
                     break;
                 case "6":
                     System.out.println("Digite o cpf do cliente");
@@ -70,7 +71,9 @@ public class App {
                     titleToSearch = sc.nextLine();
                     System.out.println("Digite o autor do livro");
                     authorToSearch = sc.nextLine();
-                    bibliotecaService.devolverLivro(bibliotecaService.buscarPorCpf(cpfToSearch),bibliotecaService.buscarPorTituloEAutor(titleToSearch,authorToSearch));
+                    bibliotecaService.devolverLivro(bibliotecaService.buscarPorCpf(cpfToSearch),
+                    bibliotecaService.buscarPorTituloEAutor(titleToSearch,authorToSearch));
+                    break;
                 default:
                     System.out.println("Opção invalida!");
             }

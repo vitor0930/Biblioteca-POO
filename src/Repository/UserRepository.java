@@ -1,10 +1,10 @@
 package Repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import Entity.Usuario;
 
 public class UserRepository {
-    public List <Usuario> users = new ArrayList<>(); 
+    public Set <Usuario> users = new HashSet<>(); 
 }

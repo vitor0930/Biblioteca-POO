@@ -31,6 +31,7 @@ public class App {
             switch (opcao){
                 case "0":
                     running = false;
+                    sc.close();
                     break;
                 case "1":
                     bibliotecaService.listarUsuarios();
